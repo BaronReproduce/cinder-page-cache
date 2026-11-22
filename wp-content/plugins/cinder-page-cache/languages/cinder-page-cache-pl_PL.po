@@ -1,0 +1,106 @@
+# Cinder Page Cache UI strings. Machine-assisted translation.
+msgid ""
+""
+msgstr ""
+"Project-Id-Version: Cinder Page Cache 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-22 00:00+0000\n"
+"PO-Revision-Date: 2026-11-22 00:00+0000\n"
+"Last-Translator: Ironbark Tools\n"
+"Language-Team: \n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+""
+
+msgid "Dashboard"
+msgstr "Pulpit"
+
+msgid "Cache"
+msgstr "Cache"
+
+msgid "Optimize"
+msgstr "Optymalizacja"
+
+msgid "Database"
+msgstr "Baza danych"
+
+msgid "SEO"
+msgstr "SEO"
+
+msgid "Redirects"
+msgstr "Przekierowania"
+
+msgid "Cloud"
+msgstr "Chmura"
+
+msgid "Diagnostics"
+msgstr "Diagnostyka"
+
+msgid "Tools"
+msgstr "NarzÄ™dzia"
+
+msgid "Overview"
+msgstr "PrzeglÄ…d"
+
+msgid "Cache hit rate"
+msgstr "SkutecznoÅ›Ä‡ cache"
+
+msgid "Average load"
+msgstr "Åšrednie obciÄ…Å¼enie"
+
+msgid "Cached pages"
+msgstr "Strony w cache"
+
+msgid "Cache size"
+msgstr "Rozmiar cache"
+
+msgid "Purge cache"
+msgstr "WyczyÅ›Ä‡ cache"
+
+msgid "Page cache"
+msgstr "Cache stron"
+
+msgid "Enable cache"
+msgstr "WÅ‚Ä…cz cache"
+
+msgid "Lifetime"
+msgstr "Czas Å¼ycia"
+
+msgid "seconds"
+msgstr "sekund"
+
+msgid "Excluded paths"
+msgstr "Wykluczone Å›cieÅ¼ki"
+
+msgid "Images"
+msgstr "Obrazy"
+
+msgid "Generate missing WebP copies"
+msgstr "Utwórz brakujące kopie WebP"
+
+msgid "Run maintenance now"
+msgstr "Uruchom konserwacjÄ™"
+
+msgid "Add redirect"
+msgstr "Dodaj przekierowanie"
+
+msgid "Nothing recorded yet."
+msgstr "Nic nie zapisano."
+
+msgid "Run cloud check"
+msgstr "Uruchom kontrolÄ™ w chmurze"
+
+msgid "Enable and run"
+msgstr "WÅ‚Ä…cz i uruchom"
+
+msgid "Download snapshot"
+msgstr "Pobierz migawkÄ™"
+
+msgid "Save changes"
+msgstr "Zapisz zmiany"
+
+msgid "Settings saved."
+msgstr "Ustawienia zapisane."
+

@@ -1,0 +1,106 @@
+# Cinder Page Cache UI strings. Machine-assisted translation.
+msgid ""
+""
+msgstr ""
+"Project-Id-Version: Cinder Page Cache 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-22 00:00+0000\n"
+"PO-Revision-Date: 2026-11-22 00:00+0000\n"
+"Last-Translator: Ironbark Tools\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+""
+
+msgid "Dashboard"
+msgstr "Painel"
+
+msgid "Cache"
+msgstr "Cache"
+
+msgid "Optimize"
+msgstr "Otimizar"
+
+msgid "Database"
+msgstr "Banco de dados"
+
+msgid "SEO"
+msgstr "SEO"
+
+msgid "Redirects"
+msgstr "Redirecionamentos"
+
+msgid "Cloud"
+msgstr "Nuvem"
+
+msgid "Diagnostics"
+msgstr "Diagnóstico"
+
+msgid "Tools"
+msgstr "Ferramentas"
+
+msgid "Overview"
+msgstr "Visão geral"
+
+msgid "Cache hit rate"
+msgstr "Taxa de cache"
+
+msgid "Average load"
+msgstr "Carga média"
+
+msgid "Cached pages"
+msgstr "Páginas em cache"
+
+msgid "Cache size"
+msgstr "Tamanho do cache"
+
+msgid "Purge cache"
+msgstr "Limpar cache"
+
+msgid "Page cache"
+msgstr "Cache de página"
+
+msgid "Enable cache"
+msgstr "Ativar cache"
+
+msgid "Lifetime"
+msgstr "Duração"
+
+msgid "seconds"
+msgstr "segundos"
+
+msgid "Excluded paths"
+msgstr "Caminhos excluídos"
+
+msgid "Images"
+msgstr "Imagens"
+
+msgid "Generate missing WebP copies"
+msgstr "Gerar cópias WebP faltantes"
+
+msgid "Run maintenance now"
+msgstr "Executar manutenção"
+
+msgid "Add redirect"
+msgstr "Adicionar redirecionamento"
+
+msgid "Nothing recorded yet."
+msgstr "Nada registrado."
+
+msgid "Run cloud check"
+msgstr "Executar análise na nuvem"
+
+msgid "Enable and run"
+msgstr "Ativar e executar"
+
+msgid "Download snapshot"
+msgstr "Baixar instantâneo"
+
+msgid "Save changes"
+msgstr "Salvar alterações"
+
+msgid "Settings saved."
+msgstr "Configurações salvas."
+

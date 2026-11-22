@@ -1,0 +1,18 @@
+.cinder-page-cache-breadcrumbs {
+    font-size: .875em;
+    margin: 0 0 1.25em;
+    opacity: .85;
+}
+
+.cinder-page-cache-breadcrumbs a {
+    text-decoration: none;
+}
+
+.cinder-page-cache-breadcrumbs a:hover,
+.cinder-page-cache-breadcrumbs a:focus {
+    text-decoration: underline;
+}
+
+.cinder-page-cache-breadcrumbs span {
+    font-weight: 600;
+}

@@ -1,0 +1,44 @@
+# Copyright (C) 2026 Cinder Page Cache
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Cinder Page Cache 1.0.0"
+"Report-Msgid-Bugs-To: https://wpanels.xyz/\n"
+"POT-Creation-Date: 2026-11-19 16:45+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: WP-CLI 2.11.0\n"
+
+msgid "Performance & SEO"
+msgstr ""
+
+msgid "Environment configuration"
+msgstr ""
+
+msgid "Configuration entries can be read"
+msgstr ""
+
+msgid "Server environment"
+msgstr ""
+
+msgid "Settings saved."
+msgstr ""
+
+msgid "Clear cache"
+msgstr ""
+
+msgid "Cloud benchmark"
+msgstr ""
+
+msgid "Run cloud check"
+msgstr ""
+
+msgid "Enable with config details"
+msgstr ""
+
+msgid "Runtime only"
+msgstr ""
+
+msgid "Not now"
+msgstr ""
