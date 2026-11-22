@@ -1,0 +1,16 @@
+# build output
+dist/
+*.zip
+!src/**/*.zip
+
+# local / editor
+.env
+.env.*
+.idea/
+.vscode/
+*.log
+*.bak
+.DS_Store
+Thumbs.db
+node_modules/
+vendor/bin/
