@@ -1,0 +1,106 @@
+# Cinder Page Cache UI strings. Machine-assisted translation.
+msgid ""
+""
+msgstr ""
+"Project-Id-Version: Cinder Page Cache 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-22 00:00+0000\n"
+"PO-Revision-Date: 2026-11-22 00:00+0000\n"
+"Last-Translator: Ironbark Tools\n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+""
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Cache"
+msgstr "Cache"
+
+msgid "Optimize"
+msgstr "Optimaliseren"
+
+msgid "Database"
+msgstr "Database"
+
+msgid "SEO"
+msgstr "SEO"
+
+msgid "Redirects"
+msgstr "Omleidingen"
+
+msgid "Cloud"
+msgstr "Cloud"
+
+msgid "Diagnostics"
+msgstr "Diagnose"
+
+msgid "Tools"
+msgstr "Gereedschap"
+
+msgid "Overview"
+msgstr "Overzicht"
+
+msgid "Cache hit rate"
+msgstr "Cachetrefferpercentage"
+
+msgid "Average load"
+msgstr "Gemiddelde laadtijd"
+
+msgid "Cached pages"
+msgstr "Gecachte pagina's"
+
+msgid "Cache size"
+msgstr "Cachegrootte"
+
+msgid "Purge cache"
+msgstr "Cache legen"
+
+msgid "Page cache"
+msgstr "Paginacache"
+
+msgid "Enable cache"
+msgstr "Cache inschakelen"
+
+msgid "Lifetime"
+msgstr "Levensduur"
+
+msgid "seconds"
+msgstr "seconden"
+
+msgid "Excluded paths"
+msgstr "Uitgesloten paden"
+
+msgid "Images"
+msgstr "Afbeeldingen"
+
+msgid "Generate missing WebP copies"
+msgstr "Ontbrekende WebP-kopieën maken"
+
+msgid "Run maintenance now"
+msgstr "Onderhoud nu uitvoeren"
+
+msgid "Add redirect"
+msgstr "Omleiding toevoegen"
+
+msgid "Nothing recorded yet."
+msgstr "Nog niets vastgelegd."
+
+msgid "Run cloud check"
+msgstr "Cloudcontrole starten"
+
+msgid "Enable and run"
+msgstr "Inschakelen en starten"
+
+msgid "Download snapshot"
+msgstr "Momentopname downloaden"
+
+msgid "Save changes"
+msgstr "Wijzigingen opslaan"
+
+msgid "Settings saved."
+msgstr "Instellingen opgeslagen."
+
