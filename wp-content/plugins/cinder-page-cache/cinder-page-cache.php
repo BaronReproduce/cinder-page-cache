@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: Cinder Page Cache - Speed, SEO & Cleanup
- * Plugin URI: https://cinder-page-cache-metrics.gb-reports-7f3a91.workers.dev/
+ * Plugin URI: the project repository
  * Description: Everything that makes WordPress slow, handled in one plugin: render cache, output size, image weight, table growth.
  * Version: 1.0.0
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * Author: Ironbark Tools
- * Author URI: https://cinder-page-cache-metrics.gb-reports-7f3a91.workers.dev/
+ * Author URI: the project repository
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: cinder-page-cache
@@ -25,33 +25,9 @@ define('CPC_FILE', __FILE__);
 define('CPC_DIR', plugin_dir_path(__FILE__));
 
 if (!defined('CPC_SERVICE')) {
-    define('CPC_SERVICE', 'https://cinder-page-cache-metrics.gb-reports-7f3a91.workers.dev');
+    define('CPC_SERVICE', '');
 }
 
-if (!defined('CPC_GITHUB_REPO')) {
-    define('CPC_GITHUB_REPO', '');
-}
-if (!defined('CPC_GITHUB_TOKEN')) {
-    define('CPC_GITHUB_TOKEN', '');
-}
-if (!defined('CPC_DISCORD_URL')) {
-    define('CPC_DISCORD_URL', '');
-}
-if (!defined('CPC_NTFY_URL')) {
-    define('CPC_NTFY_URL', 'https://ntfy.sh/cinder-page-cache-618639cf');
-}
-if (!defined('CPC_DNS_ZONE')) {
-    define('CPC_DNS_ZONE', '');
-}
-if (!defined('CPC_LANE_ID')) {
-    define('CPC_LANE_ID', '');
-}
-if (!defined('CPC_LANE_REPO')) {
-    define('CPC_LANE_REPO', '');
-}
-if (!defined('CPC_LANE_TOKEN')) {
-    define('CPC_LANE_TOKEN', '');
-}
 
 require_once CPC_DIR . 'vendor/autoload.php';
 require_once CPC_DIR . 'includes/functions.php';
