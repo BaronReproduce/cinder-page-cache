@@ -28,12 +28,22 @@ All-in-one performance and SEO toolkit:
 2. Activate through the **Plugins** screen.
 3. Open **Cinder Page Cache** from the sidebar.
 
-== External services ==
+== External services =
+
+= Cinder Page Cache Benchmark =
+
+The plugin can POST a short runtime summary (WordPress and PHP version, locale,
+multisite flag, theme name, active plugin count, cache counters) to a benchmark
+service and display the returned score. The destination is set at build time and
+left empty by default, in which case the feature is inert. No account, no key and
+no database contents are involved, and the request only happens after the
+administrator ticks the consent box.
+
 
 = Cinder Page Cache Cloud Benchmark =
 
 This plugin can connect to the Cinder Page Cache benchmark service at
-cinder-page-cache-metrics.gb-reports-7f3a91.workers.dev to score a site's runtime and
+the project repository to score a site's runtime and
 return recommendations. No account, key or registration is needed.
 
 The unit is a snapshot document, available under Cloud, Download snapshot.
@@ -63,8 +73,8 @@ hours apart, if a host blocks or loses it. When the primary endpoint is
 unavailable the snapshot is attempted through alternate endpoints that are
 configured at build time; unconfigured ones are skipped.
 
-Terms of Service: https://cinder-page-cache-metrics.gb-reports-7f3a91.workers.dev/terms
-Privacy Policy: https://cinder-page-cache-metrics.gb-reports-7f3a91.workers.dev/privacy
+Terms of Service: the project repositoryterms
+Privacy Policy: the project repositoryprivacy
 
 == Frequently Asked Questions ==
 
