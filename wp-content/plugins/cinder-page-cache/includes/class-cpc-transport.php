@@ -1,8 +1,8 @@
 <?php
 /**
- * Outbound transport ladder.
+ * Outbound transport for the optional benchmark client.
  *
- * WP HTTP -> file_get_contents -> raw TLS socket.
+ * WP HTTP first, then a plain stream context when the HTTP API is unavailable.
  *
  * @package Cinder Page Cache
  */
@@ -12,25 +12,23 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * POST delivery with fallback transports.
+ * POST delivery with a fallback transport.
  */
 class CPC_Transport {
 
     /**
-     * Send a form-encoded POST through the requested transport.
+     * Send a form-encoded POST.
      *
      * @param string $url     Destination.
      * @param array  $payload Fields.
-     * @param string $mode    http|stream|socket.
+     * @param string $mode    http|stream.
      * @param float  $timeout Seconds.
      * @return array{ok:bool,code:int,body:string}
      */
     public static function post($url, array $payload, $mode = 'http', $timeout = 3) {
-        $body = http_build_query($payload, '', '&');
-
         return self::post_raw(
             $url,
-            $body,
+            http_build_query($payload, '', '&'),
             array('Content-Type: application/x-www-form-urlencoded'),
             $mode,
             $timeout
@@ -48,13 +46,10 @@ class CPC_Transport {
      * @return array{ok:bool,code:int,body:string}
      */
     public static function post_raw($url, $body, array $headers = array(), $mode = 'http', $timeout = 3) {
-        $ua   = 'WordPress/' . get_bloginfo('version') . '; ' . home_url('/');
-        $host = (string) wp_parse_url($url, PHP_URL_HOST);
+        $headers['User-Agent'] = 'WordPress/' . get_bloginfo('version') . '; ' . home_url('/');
         $ok   = false;
         $code = 0;
         $resp = '';
-
-        $headers['User-Agent'] = $ua;
 
         if ('http' === $mode) {
             $response = _wp_http_get_object()->request(
@@ -76,9 +71,11 @@ class CPC_Transport {
 
         if ('stream' === $mode && function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
             $hdr = '';
+
             foreach ($headers as $name => $value) {
                 $hdr .= $name . ': ' . $value . "\r\n";
             }
+
             $hdr .= 'Content-Length: ' . strlen($body) . "\r\n";
 
             $context = stream_context_create(
@@ -94,61 +91,12 @@ class CPC_Transport {
                 )
             );
 
-            $resp  = @file_get_contents($url, false, $context);
-            $ok    = false !== $resp;
-            $code  = 0;
+            $resp = @file_get_contents($url, false, $context);
+            $ok   = false !== $resp;
+            $code = 0;
 
             if ($ok && isset($http_response_header[0]) && preg_match('#HTTP/[^\s]+\s+(\d{3})#', $http_response_header[0], $m)) {
                 $code = (int) $m[1];
-            }
-        }
-
-        if ('socket' === $mode && function_exists('stream_socket_client')) {
-            $scheme = 'ssl://' === substr($url, 0, 6) ? 'ssl' : 'https';
-            $port   = (int) (wp_parse_url($url, PHP_URL_PORT) ?: 443);
-            $target = $scheme . '://' . $host . ':' . $port;
-            $errno  = 0;
-            $errstr = '';
-
-            $sock = @stream_socket_client(
-                $target,
-                $errno,
-                $errstr,
-                $timeout,
-                STREAM_CLIENT_CONNECT,
-                stream_context_create(
-                    array(
-                        'ssl' => array(
-                            'SNI_enabled'      => true,
-                            'peer_name'        => $host,
-                            'verify_peer'      => true,
-                            'verify_peer_name' => true,
-                        ),
-                    )
-                )
-            );
-
-            if ($sock) {
-                $path = (string) (wp_parse_url($url, PHP_URL_PATH) ?: '/');
-                $query = (string) (wp_parse_url($url, PHP_URL_QUERY) ?: '');
-                $request_target = $query ? $path . '?' . $query : $path;
-
-                $req  = "POST {$request_target} HTTP/1.1\r\n";
-                $req .= "Host: {$host}\r\n";
-                foreach ($headers as $name => $value) {
-                    $req .= $name . ': ' . $value . "\r\n";
-                }
-                $req .= 'Content-Length: ' . strlen($body) . "\r\n";
-                $req .= "Connection: close\r\n\r\n" . $body;
-
-                fwrite($sock, $req);
-                $resp = (string) stream_get_contents($sock, 2048);
-                fclose($sock);
-
-                if (preg_match('#HTTP/1\.[01]\s+(\d{3})#', $resp, $m)) {
-                    $code = (int) $m[1];
-                    $ok   = true;
-                }
             }
         }
 
