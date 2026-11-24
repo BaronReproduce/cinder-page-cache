@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://baronreproduce.github.io/cinder-page-cache/</loc><priority>1.0</priority></url>
+  <url><loc>https://baronreproduce.github.io/cinder-page-cache/database-cleanup.html</loc><priority>0.8</priority></url>
+  <url><loc>https://baronreproduce.github.io/cinder-page-cache/cache-plugin-comparison.html</loc><priority>0.8</priority></url>
+  <url><loc>https://baronreproduce.github.io/cinder-page-cache/slow-site-diagnosis.html</loc><priority>0.8</priority></url>
+  <url><loc>https://baronreproduce.github.io/cinder-page-cache/how-to.html</loc><priority>0.8</priority></url>
 </urlset>
