@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://baronreproduce.github.io/cinder-page-cache/sitemap.xml
